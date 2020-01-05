@@ -24,3 +24,23 @@
       - lutris
       - akmod-nvidia
     state: latest
+
+- name: disable wayland
+  lineinfile:
+    path: /etc/gdm/custom.conf
+    insertafter: '^\[daemon'
+    line: 'WaylandEnable=true'
+
+- name: disable wayland part 2
+  lineinfile:
+    path: /etc/gdm/custom.conf
+    insertafter: '^\[daemon'
+    line: 'DefaultSession=gnome-xorg.desktop'
+    create: yes
+
+- name: create nouveau blacklist file
+  copy:
+    dest: /etc/modprobe.d/nouveau.conf
+    content: |
+      blacklist nouveau
+
