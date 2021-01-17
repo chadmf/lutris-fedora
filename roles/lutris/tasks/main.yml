@@ -15,6 +15,7 @@
   dnf:
     name: 
       - gnutls
+      - gnutls.i686
       - gnutls-devel 
       - openldap
       - openldap-devel
