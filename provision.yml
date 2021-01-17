@@ -1,5 +1,5 @@
 ---
-- name: Provision Instances
+- name: Configure Lutris on Fedora
   hosts: localhost
   gather_facts: False
   become: yes
