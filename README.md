@@ -15,5 +15,14 @@ sudo dnf install ansible -y
 ansible-playbook provision.yml
 ```
 
+Example:
+
+```bash
+ansible-playbook provision.yml -e fedora_version=322
+```
+
 TODO:
 Add molecule testing
+
+Anyone who would like to contribute please submit a PR Thanks!
+
