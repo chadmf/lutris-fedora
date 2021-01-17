@@ -18,7 +18,7 @@ ansible-playbook provision.yml
 Example:
 
 ```bash
-ansible-playbook provision.yml -e fedora_version=322
+ansible-playbook provision.yml -e fedora_version=32
 ```
 
 TODO:
