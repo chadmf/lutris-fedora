@@ -1,7 +1,7 @@
-
 ---
 - name: Provision Instances
   hosts: localhost
   gather_facts: False
+  become: yes
   roles:
     - lutris
