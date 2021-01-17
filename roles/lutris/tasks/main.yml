@@ -14,7 +14,9 @@
 - name: configure and install lutris akmod-nvidia and dependencies for DXVK (Vulcan)
   dnf:
     name: 
+      - gamemode.i686
       - gnutls
+      - gnutls.i686
       - gnutls-devel 
       - openldap
       - openldap-devel
