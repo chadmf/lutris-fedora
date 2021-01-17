@@ -9,11 +9,13 @@ Install ansible:
 sudo dnf install ansible -y
 ```
 
-### Install
+### Install (defaults to Fedora 33)
 
 ```bash
 ansible-playbook provision.yml
 ```
+
+### Install and specify Fedora Version
 
 Example:
 

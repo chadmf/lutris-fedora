@@ -1,0 +1,28 @@
+---
+- name: install the rpmfusion repo packages
+  dnf:
+    state: present
+    name: 
+    - http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_version }}.noarch.rpm
+    - http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_version }}.noarch.rpm
+
+- name: upgrade all packages
+  dnf:
+    name: "*"
+    state: latest
+
+- name: configure and install lutris akmod-nvidia and dependencies for DXVK (Vulcan)
+  dnf:
+    name: 
+      - gnutls
+      - gnutls-devel 
+      - openldap
+      - openldap-devel
+      - libgpg-error
+      - sqlite2.i686
+      - sqlite2.x86_64 
+      - lutris
+      - akmod-nvidia
+      - vulkan-loader 
+      - vulkan-loader.i686
+    state: latest
